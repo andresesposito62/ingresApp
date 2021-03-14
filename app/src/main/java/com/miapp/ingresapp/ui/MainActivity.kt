@@ -1,7 +1,8 @@
-package com.miapp.ingresapp
+package com.miapp.ingresapp.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.miapp.ingresapp.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

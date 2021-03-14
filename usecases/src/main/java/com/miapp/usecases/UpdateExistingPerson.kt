@@ -1,4 +1,4 @@
 package com.miapp.usecases
 
-class MyClass {
+class UpdateExistingPerson {
 }
