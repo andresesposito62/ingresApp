@@ -1,13 +1,17 @@
 package com.miapp.data
 
 import com.miapp.domain.Person
+import javax.naming.Context
 
-class PersonsRepository (private val uiPersonSource: UiPersonSource){
+class PersonsRepository (private val uiPersonSourceForCreateRegistrer: UiPersonSourceForCreateRegistrer,
+                         private val uiPersonSourceForReadRegistrer: UiPersonSourceForReadRegistrer,
+                         private val uiPersonSourceForUpdateRegistrer: UiPersonSourceForUpdateRegistrer,
+                         private val uiPersonSourceForDeleteRegistrer: UiPersonSourceForDeleteRegistrer){
 
     fun createPerson(person: Person?): Boolean{
         var statusAction : Boolean = false
         if (person != null) {
-             statusAction = uiPersonSource.createUiPerson(person)
+             statusAction = uiPersonSourceForCreateRegistrer.createUiPerson(person)
         }
         return statusAction
     }
@@ -15,7 +19,7 @@ class PersonsRepository (private val uiPersonSource: UiPersonSource){
     fun readPerson(person: Person?): Person?{
         var personResult : Person? = null
         if (person != null) {
-            personResult = uiPersonSource.readUiPerson(person)
+            personResult = uiPersonSourceForReadRegistrer.readUiPerson(person)
         }
         return personResult
     }
@@ -23,7 +27,7 @@ class PersonsRepository (private val uiPersonSource: UiPersonSource){
     fun updatePerson(person: Person?): Boolean{
         var statusAction : Boolean = false
         if (person != null) {
-            statusAction = uiPersonSource.updateUiPerson(person)
+            statusAction = uiPersonSourceForUpdateRegistrer.updateUiPerson(person)
         }
         return statusAction
     }
@@ -31,16 +35,22 @@ class PersonsRepository (private val uiPersonSource: UiPersonSource){
     fun deletePerson(person: Person?): Boolean {
         var statusAction : Boolean = false
         if (person != null) {
-            statusAction = uiPersonSource.deleteUiPerson(person)
+            statusAction = uiPersonSourceForDeleteRegistrer.deleteUiPerson(person)
         }
         return statusAction
     }
 }
 
 //Origenes del repositorio
-interface UiPersonSource{
+interface UiPersonSourceForCreateRegistrer{
     fun createUiPerson(person: Person) : Boolean
+}
+interface UiPersonSourceForReadRegistrer{
     fun readUiPerson(person: Person) : Person
+}
+interface UiPersonSourceForUpdateRegistrer{
     fun updateUiPerson(person: Person) : Boolean
+}
+interface UiPersonSourceForDeleteRegistrer{
     fun deleteUiPerson(person: Person) : Boolean
 }

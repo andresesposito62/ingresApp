@@ -7,12 +7,14 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
 import com.miapp.ingresapp.databinding.ActivityLoginBinding
+
+
 import com.miapp.ingresapp.ui.home.ActionSelectorActivity
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var viewModel  : LoginViewModel
-    private lateinit var binding: ActivityLoginBinding
+    private lateinit var binding : ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

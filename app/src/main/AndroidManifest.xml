@@ -10,8 +10,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
-        <activity android:name=".ui.MainActivity">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".ui.readperson.ReadActivity"></activity>
+        <activity android:name=".ui.readperson.ReadRegistrerActivity" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,9 +23,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.home.ActionSelectorActivity" />
-        <activity
-            android:name=".ui.login.LoginActivity"
-            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

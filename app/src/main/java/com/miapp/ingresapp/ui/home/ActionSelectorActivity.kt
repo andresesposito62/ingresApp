@@ -9,8 +9,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.miapp.ingresapp.R
-import com.miapp.ingresapp.ui.createperson.CreateRegistrerActivity
-import com.miapp.ingresapp.ui.readperson.ReadRegistrerActivity
+import com.miapp.ingresapp.ui.readperson.ReadActivity
 
 class ActionSelectorActivity : AppCompatActivity(), RecyclerAdapter.OnActionsClickListener, ActionSelectorView{
 
@@ -77,12 +76,12 @@ class ActionSelectorActivity : AppCompatActivity(), RecyclerAdapter.OnActionsCli
     }
 
     override fun navigateToCreateRegistrer(){
-        val intent = Intent(this, CreateRegistrerActivity::class.java)
+        //val intent = Intent(this, CreateRegistrerActivity::class.java)
         startActivity(intent)
     }
 
     override fun navigateToReadRegistrer(){
-        val intent = Intent(this, ReadRegistrerActivity::class.java)
+        val intent = Intent(this, ReadActivity::class.java)
         startActivity(intent)
     }
 
