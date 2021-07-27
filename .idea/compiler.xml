@@ -3,6 +3,9 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.7">
       <module name="ingresApp.app" target="1.8" />
+      <module name="ingresApp.data" target="1.8" />
+      <module name="ingresApp.domain" target="1.8" />
+      <module name="ingresApp.usecases" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

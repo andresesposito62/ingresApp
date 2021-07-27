@@ -1,7 +1,6 @@
 package com.miapp.data
 
 import com.miapp.domain.Person
-import javax.naming.Context
 
 class PersonsRepository (private val uiPersonSourceForCreateRegistrer: UiPersonSourceForCreateRegistrer,
                          private val uiPersonSourceForReadRegistrer: UiPersonSourceForReadRegistrer,
