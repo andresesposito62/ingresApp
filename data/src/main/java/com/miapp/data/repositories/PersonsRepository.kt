@@ -1,11 +1,12 @@
-package com.miapp.data
+package com.miapp.data.repositories
 
 import com.miapp.domain.Person
 
 class PersonsRepository (private val uiPersonSourceForCreateRegistrer: UiPersonSourceForCreateRegistrer,
                          private val uiPersonSourceForReadRegistrer: UiPersonSourceForReadRegistrer,
                          private val uiPersonSourceForUpdateRegistrer: UiPersonSourceForUpdateRegistrer,
-                         private val uiPersonSourceForDeleteRegistrer: UiPersonSourceForDeleteRegistrer){
+                         private val uiPersonSourceForDeleteRegistrer: UiPersonSourceForDeleteRegistrer
+){
 
     fun createPerson(person: Person?): Boolean{
         var statusAction : Boolean = false

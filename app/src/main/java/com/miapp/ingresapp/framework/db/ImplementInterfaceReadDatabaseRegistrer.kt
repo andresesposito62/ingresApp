@@ -1,10 +1,11 @@
 package com.miapp.ingresapp.framework.db
 
 import android.content.Context
-import com.miapp.data.UiPersonSourceForReadRegistrer
+import com.miapp.data.repositories.UiPersonSourceForReadRegistrer
 import com.miapp.domain.Person
 
-class ImplementInterfaceReadDatabaseRegistrer(private var context: Context) : UiPersonSourceForReadRegistrer {
+class ImplementInterfaceReadDatabaseRegistrer(private var context: Context) :
+    UiPersonSourceForReadRegistrer {
     override fun readUiPerson(person: Person): Person {
         var identificacion = person.identification
         var admin = AdminSQLiteOpenHelper(context, "administracion12", null, 1)

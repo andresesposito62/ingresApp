@@ -1,6 +1,6 @@
 package com.miapp.usecases
 
-import com.miapp.data.PersonsRepository
+import com.miapp.data.repositories.PersonsRepository
 import com.miapp.domain.Person
 
 class UpdateExistingPerson (private val personsRepository: PersonsRepository) {
